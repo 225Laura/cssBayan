@@ -5,6 +5,56 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #343A40;
+    background-color: #FCF7DE;
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    padding: 6.25em;
+    margin: 0 auto;
+    width: 80%;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 3rem;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.img__wrapper {
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.box {
+    margin-bottom: 1.875em;
+    position: relative;
+}
+
+.box__title {
+    display: block;
+    padding: 1.875em 0 0 0;
+    border-top: 2px solid #343A40;
+    font-size: 1.8rem;
+    font-weight: 900;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s ease-out;
+}
+.box-title::after {
+
+}
+
+.box__trigger {
+    position: absolute;
+    opacity: 0;
 }
