@@ -19,6 +19,10 @@ body {
     width: 80%;
 }
 
+.wrapper:hover {
+    color: #FFB703;
+}
+
 h1 {
     font-weight: 900;
     text-align: center;
@@ -41,7 +45,7 @@ h1 {
 
 .box__title {
     display: block;
-    padding: 1em;
+    padding: 1.6em;
     border-top: 2px solid #343A40;
     font-size: 1.8rem;
     font-weight: 900;
@@ -50,6 +54,7 @@ h1 {
 }
 
 .box__title::before {
+    margin-right: 1em;
     content: "";
     display: inline-block;
     border: 15px solid transparent;
@@ -59,7 +64,9 @@ h1 {
 .img__wrapper {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s;
+    transition: all 2s ease;
+    margin: 0 auto;
+    max-width: 60%;
 }
 
 input:checked~.box__title::before {
@@ -67,12 +74,17 @@ input:checked~.box__title::before {
     border-top: 20px solid #343A40;
 }
 
-input:checked~.img__wrapper {
-    max-height: 100vh;
-    max-width: 400px;
-    object-fit: fill;
+input:checked ~ .img__wrapper {
+    max-height: 65vh;
+    max-width: 60%;
+    margin: 0 auto;
 }
 
+input:hover ~ .img__wrapper {
+    max-height: 65vh;
+    max-width: 60%;
+    margin: 0 auto;
+}
 
 
 
