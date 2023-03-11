@@ -13,6 +13,11 @@ body {
     scroll-behavior: smooth;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .wrapper {
     padding: 6.25em;
     margin: 0 auto;
@@ -45,47 +50,82 @@ h1 {
 
 .box__title {
     display: block;
-    padding: 1.6em;
+    padding: 1.5em;
     border-top: 2px solid #343A40;
-    font-size: 1.8rem;
+    font-size: clamp(0.2rem, 0.7vw + 1.5rem, 3rem);
+    text-shadow: 0.05em 0.05em 0 hsl(0 0% 0% / 0.7);
     font-weight: 900;
+    text-align: left;
     cursor: pointer;
     position: relative;
 }
 
+i {
+    position: absolute;
+    top: 1em;
+    right: 0;
+    font-size: 1.3rem;
+    text-shadow: 0.05em 0.05em 0 hsl(0 0% 0% / 0.7);
+}
+
+.fa-circle-chevron-up {
+    display: none;
+}
+
 .box__title::before {
     margin-right: 1em;
-    content: "";
-    display: inline-block;
-    border: 15px solid transparent;
-    border-left: 20px solid #343A40;
+    /* border: 15px solid transparent; */
+    /* border-left: 20px solid #343A40; */
 }
 
 .img__wrapper {
     max-height: 0;
     overflow: hidden;
-    transition: all 2s ease;
+    transition: all 1s ease;
     margin: 0 auto;
-    max-width: 60%;
+    width: 80%;
 }
 
-input:checked~.box__title::before {
-    border-left: 15px solid transparent;
-    border-top: 20px solid #343A40;
+.img__wrapper:checked {
+    display:none;
 }
+
+/* input:checked ~.box__title::before { */
+    /* border-left: 15px solid transparent; */
+    /* border-top: 20px solid #343A40; */
+/* } */
 
 input:checked ~ .img__wrapper {
+    max-height: 100vh;
+}
+
+input:checked ~ .fa-circle-chevron-down {
+    display: none;
+}
+
+input:checked~.fa-circle-chevron-up {
+    display: block;
+}
+
+/* input:hover ~ .img__wrapper {
     max-height: 65vh;
     max-width: 60%;
     margin: 0 auto;
+} */
+
+
+
+@media(max-width: 600px) {
+    .wrapper {
+        padding: 0.5em;
+    }
+
+    .box__title {
+        padding: 0.5em 1em 0.5em 0;
+        display: flex;
+    }
+
+    body {
+        color: #FFB703;
+    }
 }
-
-input:hover ~ .img__wrapper {
-    max-height: 65vh;
-    max-width: 60%;
-    margin: 0 auto;
-}
-
-
-
-
