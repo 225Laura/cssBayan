@@ -68,11 +68,8 @@ i {
     display: none;
 }
 
-.box__title::before {
-    margin-right: 1em;
-}
-
 .img__wrapper {
+    display: block;
     max-height: 0;
     overflow: hidden;
     transition: all 1s ease;
@@ -158,12 +155,12 @@ input:checked ~ .flex i.fa-circle-chevron-up {
 
     .flex:hover+.img__wrapper {
         max-height: 100vh;
-        transition: all 1.8s ease-in-out;
+        transition: all 1.8s ease-in;
     }
 
      .box:hover>.img__wrapper {
         max-height:  100vh;
-        transition: all 1.8s ease-in-out;
+        transition: all 1.8s ease-in;
     }
 
     i {
