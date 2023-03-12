@@ -143,27 +143,27 @@ input:checked ~ .flex i.fa-circle-chevron-up {
 
     .wrapper:hover {
         color: #FFB703;
+        transition: 0.7s ease;
     }
 
     .wrapper:hover>.box>.flex>i.fa-circle-chevron-down {
         display: flex;
+        transition: 0.7s ease;
     }
 
     .wrapper:hover>.box>.flex>i.fa-circle-chevron-up {
         display: none;
+        transition: 0.7s ease;
     }
 
     .flex:hover+.img__wrapper {
         max-height: 100vh;
-        transition: all 1.5s ease-in-out;
+        transition: all 1.8s ease-in-out;
     }
 
      .box:hover>.img__wrapper {
         max-height:  100vh;
-    }
-
-    .box:focus>.img__wrapper {
-        max-height: 100vh;
+        transition: all 1.8s ease-in-out;
     }
 
     i {
@@ -174,7 +174,7 @@ input:checked ~ .flex i.fa-circle-chevron-up {
         transform: rotate(3.142rad);
         align-self: flex-start;
     }
-   
+
     .box-title {
         border: 2px solid red;
     }
