@@ -78,10 +78,6 @@ i {
     cursor: pointer;
 }
 
-/* .img__wrapper:checked {
-    display:none;
-} */
-
 input:checked ~ .img__wrapper {
     max-height: 100vh;
 }
@@ -160,12 +156,12 @@ input:checked ~ .flex i.fa-circle-chevron-up {
 
     .flex:hover+.img__wrapper {
         max-height: 100vh;
-        transition: all 1.8s ease-in;
+        transition: all 1.8s ease-in-out;
     }
 
     .box:hover>.img__wrapper {
         max-height:  100vh;
-        transition: all 1.8s ease-in;
+        transition: all 1.8s ease-in-out;
     }
 
     .box:hover>.img__wrapper>img {
@@ -194,6 +190,6 @@ input:checked ~ .flex i.fa-circle-chevron-up {
         width: 100%;
         visibility: 1;
         filter: blur(0);
-        transition: all 1s ease-in;
+        transition: all 1s ease-in-out;
     }
 }
